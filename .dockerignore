@@ -1,0 +1,29 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info
+dist
+build
+
+# uv
+.venv
+uv.lock
+
+# Local email storage (use volumes instead)
+email/
+
+# Environment files
+.env
+
+# Personal files
+dns_records.txt
+TODO.md
