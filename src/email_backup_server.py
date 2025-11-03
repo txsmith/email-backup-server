@@ -44,23 +44,11 @@ class EmailBackupHandler:
                     header, value = header_pair.split(":", 1)
                     self.required_headers[header.strip().lower()] = value.strip().lower()
 
-        print(f"Email storage initialized at: {self.maildir_path}")
-        if self.allowed_recipient:
-            print(f"Only accepting mail to: {self.allowed_recipient}")
-        if self.allowed_sender_domains:
-            print(f"Only accepting mail from domains: {', '.join(self.allowed_sender_domains)}")
-        if self.require_spf_pass:
-            print("SPF validation: ENABLED")
-        if self.required_headers:
-            print(f"Required headers: {len(self.required_headers)} filter(s)")
-            for header, value in self.required_headers.items():
-                print(f"  {header}: {value}")
-
     async def handle_RCPT(self, server, session, envelope, address, rcpt_options):
         """Validate recipient address before accepting"""
         if self.allowed_recipient:
             if address.lower() != self.allowed_recipient:
-                print(f"Rejected: Wrong recipient {address}")
+                print(f"Rejected to {address}: wrong recipient")
                 return "550 Recipient not accepted"
 
         # Accept the recipient
@@ -74,9 +62,7 @@ class EmailBackupHandler:
 
         sender_domain = envelope.mail_from.split("@")[-1].lower()
         if sender_domain not in self.allowed_sender_domains:
-            print(f"Rejected: Email from unauthorized domain {sender_domain}")
-            print(f"   From: {envelope.mail_from}")
-            print(f"   To: {', '.join(envelope.rcpt_tos)}")
+            print(f"Rejected from {envelope.mail_from}: unauthorized domain {sender_domain}")
             return "550 Sender domain not authorized"
         return None
 
@@ -92,16 +78,13 @@ class EmailBackupHandler:
             result, explanation = spf.check2(i=client_ip, s=envelope.mail_from, h=helo_name)
 
             if result not in ["pass", "none"]:
-                print(f"Rejected: SPF validation failed ({result})")
-                print(f"   Client IP: {client_ip}")
-                print(f"   From: {envelope.mail_from}")
-                print(f"   Explanation: {explanation}")
+                print(f"Rejected from {envelope.mail_from}: SPF {result} (IP: {client_ip})")
                 return f"550 SPF validation failed: {result}"
 
             if result == "pass":
-                print(f"SPF check passed for {envelope.mail_from} from {client_ip}")
+                print(f"SPF pass: {envelope.mail_from} from {client_ip}")
         except Exception as e:
-            print(f"Error during SPF check: {e}")
+            print(f"Rejected from {envelope.mail_from}: SPF error ({e})")
             return "451 SPF validation error"
 
         return None
@@ -114,10 +97,9 @@ class EmailBackupHandler:
         for required_header, required_value in self.required_headers.items():
             header_value = msg.get(required_header, "")
             if header_value.lower() != required_value:
-                print("Rejected: Required header mismatch")
-                print(f"   Header: {required_header}")
-                print(f"   Expected: {required_value}")
-                print(f"   Got: {header_value}")
+                from_addr = msg.get("From", "unknown")
+                subject = msg.get("Subject", "(no subject)")
+                print(f"Rejected from {from_addr}: {subject} (header mismatch)")
                 return "550 Message rejected"
         return None
 
@@ -149,12 +131,8 @@ class EmailBackupHandler:
 
         subject = msg.get("Subject", "(no subject)")
         from_addr = msg.get("From", envelope.mail_from)
-        print("Received email:")
-        print(f"   From: {from_addr}")
-        print(f"   To: {', '.join(envelope.rcpt_tos)}")
-        print(f"   Subject: {subject}")
-        print(f"   Size: {len(envelope.content)} bytes")
-        print()
+
+        print(f"Received from {from_addr}: {subject} ({len(envelope.content)} bytes)")
 
         return "250 Message accepted for delivery"
 
@@ -204,8 +182,9 @@ class EmailBackupServer:
             print(f"Allowed Sender Domains: {', '.join(self.allowed_sender_domains)}")
         if self.require_spf_pass:
             print("SPF Validation: ENABLED")
+        if self.required_headers:
+            print(f"Required Headers: {len(self.required_headers)} filter(s)")
         print("=" * 60)
-        print("Starting server...")
 
         self.controller.start()
 
