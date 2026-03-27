@@ -1,0 +1,1130 @@
+Received: from hey.com (bigip-vip.rw-ash-int.37signals.com [10.20.0.24])
+	by 101.forward.hey.com (Postfix) with ESMTP id B6C6E8261A
+	for <81682361f4573e737e5a7f9bebff32c0@espressocode.nl>; Sat,  8 Nov 2025 10:46:15 +0000 (UTC)
+Received: from o2.ptr9382.snipcart.com (o2.ptr9382.snipcart.com [159.183.138.89])
+	by home-mx.app.hey.com (Postfix) with ESMTP id AC65684567
+	for <thomas.smith@hey.com>; Sat,  8 Nov 2025 10:46:13 +0000 (UTC)
+Received: by recvd-769f975875-gf4q7 with SMTP id recvd-769f975875-gf4q7-1-690F1F74-1D
+	2025-11-08 10:46:12.498258123 +0000 UTC m=+5744541.799869995
+Received: from MjEwMzc1Nw (unknown)
+	by geopod-ismtpd-12 (SG) with HTTP
+	id GiqX3Il8T_uM6_X-cIzjtQ
+	Sat, 08 Nov 2025 10:46:12.481 +0000 (UTC)
+Resent-From: thomas.smith@hey.com
+Date: Sat, 08 Nov 2025 10:46:12 +0000 (UTC)
+From: Dak Coffee Roasters <info@dakcoffeeroasters.com>
+Reply-To: Dak Coffee Roasters <info@dakcoffeeroasters.com>
+To: thomas.smith@hey.com
+Message-ID: <GiqX3Il8T_uM6_X-cIzjtQ@geopod-ismtpd-12>
+Subject: Order DAK32537 on Dak Coffee Roasters
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+X-Original-To: thomas.smith@hey.com
+Delivered-To: thomas.smith@hey.com
+Authentication-Results: home-mx.app.hey.com;
+	dkim=pass header.d=dakcoffeeroasters.com header.s=sc header.b=eYxkSKqA;
+	spf=pass (home-mx.app.hey.com: domain of "bounces+2103757-57af-thomas.smith=hey.com@em9030.dakcoffeeroasters.com" designates 159.183.138.89 as permitted sender) smtp.mailfrom="bounces+2103757-57af-thomas.smith=hey.com@em9030.dakcoffeeroasters.com";
+	dmarc=pass (policy=none) header.from=dakcoffeeroasters.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=hey.com;
+	s=heymail; t=1762598774;
+	h=from:from:reply-to:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding;
+	bh=CmXPt57pa42BGlUMloc3orjpyjp9ltOkutbl7HkTfY8=;
+	b=CuXgsfRjcHoc60bzgL3OFVD24cFeDCAmpcrg95djbW68kck8hFQEgAv6EfwZ2Wq8NF90Ea
+	HKT8oQNln3R7dj17CoZD+PD3+LELxzGMSE/9vKU9tEvuxxtv4qkNilQRe305VgMlebT5yt
+	49cr996j7EuLoykyHdKJK/pWkL4yqTHjmTImKR9tKZ65O3tLoqIPvsthphKJnFptgnpuvZ
+	wc1UJ6MLVxArnVPzm2In/P8h/idD6TQUSaVNsDmWzedYCrMWpOWpxBESHXcuSbr/NX8tH/
+	ICrMdIYaElajRc+CqQxcdN+Q6uEFzyfFSvkz50AId0mLIJnWjxJ0ksDCtXXIJg==
+ARC-Authentication-Results: i=1;
+	home-mx.app.hey.com;
+	dkim=pass header.d=dakcoffeeroasters.com header.s=sc header.b=eYxkSKqA;
+	spf=pass (home-mx.app.hey.com: domain of "bounces+2103757-57af-thomas.smith=hey.com@em9030.dakcoffeeroasters.com" designates 159.183.138.89 as permitted sender) smtp.mailfrom="bounces+2103757-57af-thomas.smith=hey.com@em9030.dakcoffeeroasters.com";
+	dmarc=pass (policy=none) header.from=dakcoffeeroasters.com
+ARC-Seal: i=1; s=heymail; d=hey.com; t=1762598774; a=rsa-sha256; cv=none;
+	b=AV3H+6IhGCmfT61mnvSUHc1z0cQKpwTdn9E+wt0nE5uzCOj41uMaKU5+rJfgaRuI4n4BgJ
+	A7AivN6/3fUZ+j3Ld4GdRcqqt3woMfK/AapQUpRhFfMRUug9rrZ38BRVj7pCG97na2re7M
+	c0CK3dWo78jonvf+w0T/BnrVemXOxdUUHYv2ICymkQsFL9fxiUicNJPrTFLFZJ4RHLlPfS
+	MQ9j1i+mKg0SzkpoM3lNReYBON9psmBEeEbNAEW3gJb4GCL2l4d5+MpJqLSQIMCLvejTVI
+	J/TYzjABAdSa8DYNFCxex51wCUvJXkf0AvKRvMI4Jjewlh/uMrBFdDl9GzOaEQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=dakcoffeeroasters.com;
+	h=content-transfer-encoding:content-type:date:from:mime-version:subject:
+	reply-to:to:cc:content-type:date:from:subject:to;
+	s=sc; bh=CmXPt57pa42BGlUMloc3orjpyjp9ltOkutbl7HkTfY8=;
+	b=eYxkSKqA4NuGQNX9cKyT+WAxTXonrVwZJGtnb+tB/TS8cx5Ue9bky+saFYBldcS6o+b6
+	CScK+N3Pq8CnPgM/kSidd0xWo0FnmU3VViB6Yk8i9izRX1ZOJ/MS959chpJu49I7rKJYnK
+	w8H/KKFRu+4vcyTxn+C4Bs3lODqymhKBg94hy0oSQeTrdjL+hRfJdrDTj1joyFUlHbihbK
+	0Nh+Vw51SGdnpHVf1vTR7IE5tuJaPVAmiiCwmVpj9XhyjT51RIHlweEpfRcB3LbkV7Zcj9
+	wFaMczS54ygllijAaSrdCp6UzZMQEJAjTFfsmhXieDW6aTbeEJdfWGJByrQaP5Yw==
+X-SG-EID: =?us-ascii?Q?u001=2EUkTcqyji=2F9kbferuJyvGpiLxmfSTf4AAs8zkhnp2jG9IpKcFWicVGgrWP?=
+ =?us-ascii?Q?MjCtUED8V3hwG5cHtg7JnTKNaDHA=2FsJ2mzpY469?=
+ =?us-ascii?Q?=2F6=2FrAm90Vm9C8WN9tjfTmGdpTYqud0+1QC+yIgp?=
+ =?us-ascii?Q?33EbkYsJJCyuAoY7Us+O90V+vi=2FwiQljJK0Fkfy?=
+ =?us-ascii?Q?kzLbqbqiSoWH8whk5zpBgK2xJL2BVPlK1pp9ky2?=
+ =?us-ascii?Q?UemBXSYuhhwZY3g=2FGSQxDbnuc1LVl0LjOfZ5nag?= =?us-ascii?Q?a81d?=
+X-SG-ID: =?us-ascii?Q?u001=2ESdBcvi+Evd=2FbQef8eZF3BsK68A8wYQMmPXt0cEUavoDdiBdMOSFqFR4SY?=
+ =?us-ascii?Q?0pT8D6drfQKJpW4py2R5PpSj78qqUpKq9t5d8K3?=
+ =?us-ascii?Q?cyTAKhuPcdFvta9EUOdfznKoUYFSaiqkbVR=2Fsj1?=
+ =?us-ascii?Q?lKNEbjuEfUB9qSZSB1j3OrslRrgBIBJCKr++iLo?=
+ =?us-ascii?Q?T5KoRE=2FRb=2Fo+GHQqwL?=
+X-Entity-ID: u001.I9F0wZyCuvNdh18u4etIig==
+X-Forwarded-For: thomas.smith@hey.com 81682361f4573e737e5a7f9bebff32c0@espressocode.nl
+X-Forwarded-To: 81682361f4573e737e5a7f9bebff32c0@espressocode.nl
+X-Backup-Received: 2025-11-08T11:46:16.617843
+X-Backup-From: thomas.smith@hey.com
+X-Backup-To: 81682361f4573e737e5a7f9bebff32c0@espressocode.nl
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html style=3D"width:100%;font-family:verdana, geneva, sans-serif;-webkit-t=
+ext-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0;">
+ <head>=20
+  <meta charset=3D"UTF-8">=20
+  <meta content=3D"width=3Ddevice-width, initial-scale=3D1" name=3D"viewpor=
+t">=20
+  <meta name=3D"x-apple-disable-message-reformatting">=20
+  <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">=20
+  <meta content=3D"telephone=3Dno" name=3D"format-detection">=20
+  <title>Order Confirmation E-mail</title>=20
+  <!--[if (mso 16)]>
+    <style type=3D"text/css">
+    a {text-decoration: none;}
+    </style>
+    <![endif]-->=20
+  <!--[if gte mso 9]><style>sup { font-size: 100% !important; }</style><![e=
+ndif]-->=20
+  <!--[if !mso]><!-- -->=20
+  <link href=3D"link href=3D" https: fonts.googleapis.com css?family=3D"Mon=
+tserrat&amp;display=3Dswap" " rel=3D"stylesheet">=20
+  <!--<![endif]-->=20
+  <!--[if !mso]><!-- -->=20
+  <link href=3D"link href=3D" https: fonts.googleapis.com css?family=3D"Mon=
+tserrat&amp;display=3Dswap" " rel=3D"stylesheet">=20
+  <!--<![endif]-->=20
+  <!--[if !mso]><!-- -->=20
+  <link href=3D"link href=3D" https: fonts.googleapis.com css?family=3D"Mon=
+tserrat&amp;display=3Dswap" " rel=3D"stylesheet">=20
+  <!--<![endif]-->=20
+  <!--[if !mso]><!-- -->=20
+  <link href=3D"link href=3D" https: fonts.googleapis.com css?family=3D"Mon=
+tserrat&amp;display=3Dswap" " rel=3D"stylesheet">=20
+  <!--<![endif]-->=20
+  <!--[if !mso]><!-- -->=20
+  <link href=3D"link href=3D" https: fonts.googleapis.com css?family=3D"Mon=
+tserrat&amp;display=3Dswap" " rel=3D"stylesheet">=20
+  <!--<![endif]-->=20
+  <!--[if !mso]><!-- -->=20
+  <link href=3D"link href=3D" https: fonts.googleapis.com css?family=3D"Mon=
+tserrat&amp;display=3Dswap" " rel=3D"stylesheet">=20
+  <!--<![endif]-->=20
+  <!--[if !mso]><!-- -->=20
+  <link href=3D"link href=3D" https: fonts.googleapis.com css?family=3D"Mon=
+tserrat&amp;display=3Dswap" " rel=3D"stylesheet">=20
+  <!--<![endif]-->=20
+  <!--[if !mso]><!-- -->=20
+  <link href=3D"link href=3D" https: fonts.googleapis.com css?family=3D"Mon=
+tserrat&amp;display=3Dswap" " rel=3D"stylesheet">=20
+  <!--<![endif]-->=20
+  <!--[if !mso]><!-- -->=20
+  <link href=3D"link href=3D" https: fonts.googleapis.com css?family=3D"Mon=
+tserrat&amp;display=3Dswap" " rel=3D"stylesheet">=20
+  <!--<![endif]-->=20
+  <!--[if !mso]><!-- -->=20
+  <link href=3D"link href=3D" https: fonts.googleapis.com css?family=3D"Mon=
+tserrat&amp;display=3Dswap" " rel=3D"stylesheet">=20
+  <!--<![endif]-->=20
+  <!--[if !mso]><!-- -->=20
+  <link href=3D"link href=3D" https: fonts.googleapis.com css?family=3D"Mon=
+tserrat&amp;display=3Dswap" " rel=3D"stylesheet">=20
+  <!--<![endif]-->=20
+  <!--[if !mso]><!-- -->=20
+  <link href=3D"link href=3D" https: fonts.googleapis.com css?family=3D"Mon=
+tserrat&amp;display=3Dswap" " rel=3D"stylesheet">=20
+  <!--<![endif]-->=20
+  <!--[if !mso]><!-- -->=20
+  <link href=3D"link href=3D" https: fonts.googleapis.com css?family=3D"Mon=
+tserrat&amp;display=3Dswap" " rel=3D"stylesheet">=20
+  <!--<![endif]-->=20
+  <!--[if !mso]><!-- -->=20
+  <link href=3D"link href=3D" https: fonts.googleapis.com css?family=3D"Mon=
+tserrat&amp;display=3Dswap" " rel=3D"stylesheet">=20
+  <!--<![endif]-->=20
+  <!--[if !mso]><!-- -->=20
+  <link href=3D"link href=3D" https: fonts.googleapis.com css?family=3D"Mon=
+tserrat&amp;display=3Dswap" " rel=3D"stylesheet">=20
+  <!--<![endif]-->=20
+  <!--[if !mso]><!-- -->=20
+  <link href=3D"link href=3D" https: fonts.googleapis.com css?family=3D"Mon=
+tserrat&amp;display=3Dswap" " rel=3D"stylesheet">=20
+  <!--<![endif]-->=20
+  <!--[if !mso]><!-- -->=20
+  <link href=3D"link href=3D" https: fonts.googleapis.com css?family=3D"Mon=
+tserrat&amp;display=3Dswap" " rel=3D"stylesheet">=20
+  <!--<![endif]-->=20
+  <!--[if !mso]><!-- -->=20
+  <link href=3D"link href=3D" https: fonts.googleapis.com css?family=3D"Mon=
+tserrat&amp;display=3Dswap" " rel=3D"stylesheet">=20
+  <!--<![endif]-->=20
+  <!--[if !mso]><!-- -->=20
+  <link href=3D"link href=3D" https: fonts.googleapis.com css?family=3D"Mon=
+tserrat&amp;display=3Dswap" " rel=3D"stylesheet">=20
+  <!--<![endif]-->=20
+  <style type=3D"text/css">
+@media only screen and (max-width:600px) {p, ul li, ol li, a { font-size:12=
+px!important; line-height:150%!important } h1 { font-size:30px!important; t=
+ext-align:center; line-height:120%!important } h2 { font-size:26px!importan=
+t; text-align:center; line-height:120%!important } h3 { font-size:20px!impo=
+rtant; text-align:center; line-height:120%!important } h1 a { font-size:30p=
+x!important } h2 a { font-size:26px!important } h3 a { font-size:20px!impor=
+tant } .es-menu td a { font-size:11px!important } .es-header-body p, .es-he=
+ader-body ul li, .es-header-body ol li, .es-header-body a { font-size:13px!=
+important } .es-footer-body p, .es-footer-body ul li, .es-footer-body ol li=
+, .es-footer-body a { font-size:9px!important } .es-infoblock p, .es-infobl=
+ock ul li, .es-infoblock ol li, .es-infoblock a { font-size:12px!important =
+} *[class=3D"gmail-fix"] { display:none!important } .es-m-txt-c, .es-m-txt-=
+c h1, .es-m-txt-c h2, .es-m-txt-c h3 { text-align:center!important } .es-m-=
+txt-r, .es-m-txt-r h1, .es-m-txt-r h2, .es-m-txt-r h3 { text-align:right!im=
+portant } .es-m-txt-l, .es-m-txt-l h1, .es-m-txt-l h2, .es-m-txt-l h3 { tex=
+t-align:left!important } .es-m-txt-r img, .es-m-txt-c img, .es-m-txt-l img =
+{ display:inline!important } .es-button-border { display:inline-block!impor=
+tant } a.es-button { font-size:14px!important; display:inline-block!importa=
+nt } .es-btn-fw { border-width:10px 0px!important; text-align:center!import=
+ant } .es-adaptive table, .es-btn-fw, .es-btn-fw-brdr, .es-left, .es-right =
+{ width:100%!important } .es-content table, .es-header table, .es-footer ta=
+ble, .es-content, .es-footer, .es-header { width:100%!important; max-width:=
+600px!important } .es-adapt-td { display:block!important; width:100%!import=
+ant } .adapt-img { width:100%!important; height:auto!important } .es-m-p0 {=
+ padding:0px!important } .es-m-p0r { padding-right:0px!important } .es-m-p0=
+l { padding-left:0px!important } .es-m-p0t { padding-top:0px!important } .e=
+s-m-p0b { padding-bottom:0!important } .es-m-p20b { padding-bottom:20px!imp=
+ortant } .es-mobile-hidden, .es-hidden { display:none!important } .es-desk-=
+hidden { display:table-row!important; width:auto!important; overflow:visibl=
+e!important; float:none!important; max-height:inherit!important; line-heigh=
+t:inherit!important } .es-desk-menu-hidden { display:table-cell!important }=
+ table.es-table-not-adapt, .esd-block-html table { width:auto!important } t=
+able.es-social { display:inline-block!important } table.es-social td { disp=
+lay:inline-block!important } }
+#outlook a {
+	padding:0;
+}
+.ExternalClass {
+	width:100%;
+}
+.ExternalClass,
+.ExternalClass p,
+.ExternalClass span,
+.ExternalClass font,
+.ExternalClass td,
+.ExternalClass div {
+	line-height:100%;
+}
+.es-button {
+	mso-style-priority:100!important;
+	text-decoration:none!important;
+}
+a[x-apple-data-detectors] {
+	color:inherit!important;
+	text-decoration:none!important;
+	font-size:inherit!important;
+	font-family:inherit!important;
+	font-weight:inherit!important;
+	line-height:inherit!important;
+}
+.es-desk-hidden {
+	display:none;
+	float:left;
+	overflow:hidden;
+	width:0;
+	max-height:0;
+	line-height:0;
+	mso-hide:all;
+}
+</style>=20
+ </head>=20
+ <body style=3D"width:100%;font-family:verdana, geneva, sans-serif;-webkit-=
+text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0;">=20
+  <div class=3D"es-wrapper-color" style=3D"background-color:#F8F8F9;">=20
+   <!--[if gte mso 9]>
+			<v:background xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"t">
+				<v:fill type=3D"tile" color=3D"#f8f8f9"></v:fill>
+			</v:background>
+		<![endif]-->=20
+   <table class=3D"es-wrapper" width=3D"100%" cellspacing=3D"0" cellpadding=
+=3D"0" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:c=
+ollapse;border-spacing:0px;padding:0;Margin:0;width:100%;height:100%;backgr=
+ound-repeat:repeat;background-position:center top;">=20
+     <tr style=3D"border-collapse:collapse;">=20
+      <td valign=3D"top" style=3D"padding:0;Margin:0;">=20
+       <table class=3D"es-content" cellspacing=3D"0" cellpadding=3D"0" alig=
+n=3D"center" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-coll=
+apse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%;"=
+>=20
+         <tr style=3D"border-collapse:collapse;">=20
+          <td align=3D"center" bgcolor=3D"#dddede" style=3D"padding:0;Margi=
+n:0;background-color:#DDDEDE;">=20
+           <table class=3D"es-content-body" width=3D"600" cellspacing=3D"0"=
+ cellpadding=3D"0" bgcolor=3D"#dddede" align=3D"center" style=3D"mso-table-=
+lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px=
+;background-color:#DDDEDE;">=20
+             <tr style=3D"border-collapse:collapse;">=20
+              <td align=3D"left" style=3D"padding:0;Margin:0;padding-top:10=
+px;padding-left:20px;padding-right:20px;">=20
+               <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" st=
+yle=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;b=
+order-spacing:0px;">=20
+                 <tr style=3D"border-collapse:collapse;">=20
+                  <td width=3D"560" valign=3D"top" align=3D"center" style=
+=3D"padding:0;Margin:0;">=20
+                   <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0=
+" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collap=
+se;border-spacing:0px;">=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"center" style=3D"padding:0;Margin:0;"><p=
+ style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;=
+mso-line-height-rule:exactly;font-size:8px;font-family:verdana, geneva, san=
+s-serif;line-height:12px;color:#DDDEDE;">Confirmation of your order.</p></t=
+d>=20
+                     </tr>=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"center" style=3D"padding:0;Margin:0;padd=
+ing-left:20px;padding-right:20px;"><img src=3D"https://fwjri.stripocdn.emai=
+l/content/guids/CABINET_0c97b4278bbc98ffc5fae915ade54c44/images/72571563100=
+049569.png" alt style=3D"display:block;border:0;outline:none;text-decoratio=
+n:none;-ms-interpolation-mode:bicubic;" width=3D"125"></td>=20
+                     </tr>=20
+                   </table></td>=20
+                 </tr>=20
+               </table></td>=20
+             </tr>=20
+           </table></td>=20
+         </tr>=20
+       </table>=20
+       <table cellpadding=3D"0" cellspacing=3D"0" class=3D"es-content" alig=
+n=3D"center" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-coll=
+apse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%;"=
+>=20
+         <tr style=3D"border-collapse:collapse;">=20
+          <td align=3D"center" bgcolor=3D"#dddede" style=3D"padding:0;Margi=
+n:0;background-color:#DDDEDE;">=20
+           <table bgcolor=3D"#ffffff" class=3D"es-content-body" align=3D"ce=
+nter" cellpadding=3D"0" cellspacing=3D"0" width=3D"600" style=3D"mso-table-=
+lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px=
+;background-color:#DDDEDE;">=20
+             <tr style=3D"border-collapse:collapse;">=20
+              <td align=3D"left" style=3D"padding:0;Margin:0;padding-top:20=
+px;">=20
+               <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" st=
+yle=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;b=
+order-spacing:0px;">=20
+                 <tr style=3D"border-collapse:collapse;">=20
+                  <td width=3D"600" align=3D"center" valign=3D"top" style=
+=3D"padding:0;Margin:0;">=20
+                   <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collap=
+se;border-spacing:0px;">=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"center" style=3D"padding:0;Margin:0;padd=
+ing-bottom:20px;padding-left:20px;padding-right:20px;">=20
+                       <table border=3D"0" width=3D"100%" height=3D"100%" c=
+ellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt;mso-table-=
+rspace:0pt;border-collapse:collapse;border-spacing:0px;">=20
+                         <tr style=3D"border-collapse:collapse;">=20
+                          <td style=3D"padding:0;Margin:0px;border-bottom:1=
+px solid #343434;background:none;height:1px;width:100%;margin:0px;"></td>=20
+                         </tr>=20
+                       </table></td>=20
+                     </tr>=20
+                     <tr class=3D"es-mobile-hidden" style=3D"border-collaps=
+e:collapse;">=20
+                      <td align=3D"center" class=3D"es-m-txt-c" style=3D"pa=
+dding:0;Margin:0;padding-bottom:15px;padding-left:20px;padding-right:20px;"=
+><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:no=
+ne;mso-line-height-rule:exactly;font-size:13px;font-family:verdana, geneva,=
+ sans-serif;line-height:20px;color:#343434;">C O N F I R M A T I O N&nbsp; =
+&nbsp;O F&nbsp; &nbsp;Y O U R &nbsp; O R D E R</p></td>=20
+                     </tr>=20
+                     <tr class=3D"es-desk-hidden" style=3D"display:none;flo=
+at:left;overflow:hidden;width:0;max-height:0;line-height:0;mso-hide:all;bor=
+der-collapse:collapse;">=20
+                      <td align=3D"center" class=3D"es-m-txt-c" style=3D"pa=
+dding:0;Margin:0;padding-bottom:15px;padding-left:20px;padding-right:20px;"=
+><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:no=
+ne;mso-line-height-rule:exactly;font-size:9px;font-family:verdana, geneva, =
+sans-serif;line-height:14px;color:#343434;">CONFIRMATION OF YOUR ORDER</p><=
+/td>=20
+                     </tr>=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"center" style=3D"padding:0;Margin:0;"><i=
+mg class=3D"adapt-img" src=3D"https://fwjri.stripocdn.email/content/guids/C=
+ABINET_0c97b4278bbc98ffc5fae915ade54c44/images/78941563116450789.jpeg" alt =
+style=3D"display:block;border:0;outline:none;text-decoration:none;-ms-inter=
+polation-mode:bicubic;" width=3D"600"></td>=20
+                     </tr>=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"center" class=3D"es-m-txt-c" style=3D"pa=
+dding:0;Margin:0;padding-top:20px;padding-left:20px;padding-right:20px;"><p=
+ style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;=
+mso-line-height-rule:exactly;font-size:13px;font-family:verdana, geneva, sa=
+ns-serif;line-height:20px;color:#333333;"><b>Thank you! You order DAK32537 =
+has now been confirmed.</b></p><p style=3D"Margin:0;-webkit-text-size-adjus=
+t:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:13p=
+x;font-family:verdana, geneva, sans-serif;line-height:20px;color:#333333;">=
+<br></p><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-ad=
+just:none;mso-line-height-rule:exactly;font-size:12px;font-family:verdana, =
+geneva, sans-serif;line-height:18px;color:#333333;">Below, you will find a =
+summary of your order, your address and account details. Please review our =
+<a target=3D"_blank" style=3D"-webkit-text-size-adjust:none;-ms-text-size-a=
+djust:none;mso-line-height-rule:exactly;font-family:verdana, geneva, sans-s=
+erif;font-size:12px;text-decoration:none;color:#343434;" href=3D"https://da=
+kcoffeeroasters.com/shipping">shipping policy</a> if you haven't done so al=
+ready.</p></td>=20
+                     </tr>=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"center" style=3D"Margin:0;padding-top:20=
+px;padding-bottom:20px;padding-left:20px;padding-right:20px;">=20
+                       <table border=3D"0" width=3D"100%" height=3D"100%" c=
+ellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt;mso-table-=
+rspace:0pt;border-collapse:collapse;border-spacing:0px;">=20
+                         <tr style=3D"border-collapse:collapse;">=20
+                          <td style=3D"padding:0;Margin:0px;border-bottom:1=
+px solid #343434;background:none;height:1px;width:100%;margin:0px;"></td>=20
+                         </tr>=20
+                       </table></td>=20
+                     </tr>=20
+                   </table></td>=20
+                 </tr>=20
+               </table></td>=20
+             </tr>=20
+             <tr class=3D"es-mobile-hidden" style=3D"border-collapse:collap=
+se;">=20
+              <td align=3D"left" style=3D"Margin:0;padding-top:20px;padding=
+-bottom:20px;padding-left:20px;padding-right:20px;">=20
+               <!--[if mso]><table width=3D"560" cellpadding=3D"0" cellspac=
+ing=3D"0"><tr><td width=3D"280" valign=3D"top"><![endif]-->=20
+               <!--[if mso]></td><td width=3D"120" valign=3D"top"><![endif]=
+-->=20
+               <table cellpadding=3D"0" cellspacing=3D"0" class=3D"es-left"=
+ align=3D"left" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-c=
+ollapse:collapse;border-spacing:0px;float:left;">=20
+                 <tr style=3D"border-collapse:collapse;">=20
+                  <td width=3D"240" align=3D"center" style=3D"padding:0;Mar=
+gin:0;">=20
+                   <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collap=
+se;border-spacing:0px;">=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"left" style=3D"padding:0;Margin:0;"><p s=
+tyle=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;ms=
+o-line-height-rule:exactly;font-size:12px;font-family:verdana, geneva, sans=
+-serif;line-height:18px;color:#333333;"><strong>Description</strong></p></t=
+d>=20
+                     </tr>=20
+                   </table></td>=20
+                  <td class=3D"es-hidden" width=3D"40" style=3D"padding:0;M=
+argin:0;"></td>=20
+                 </tr>=20
+               </table>=20
+               <!--[if mso]></td><td width=3D"40"></td><td width=3D"120" va=
+lign=3D"top"><![endif]-->=20
+               <table cellpadding=3D"0" cellspacing=3D"0" class=3D"es-left"=
+ align=3D"left" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-c=
+ollapse:collapse;border-spacing:0px;float:left;">=20
+                 <tr style=3D"border-collapse:collapse;">=20
+                  <td width=3D"120" align=3D"center" style=3D"padding:0;Mar=
+gin:0;">=20
+                   <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collap=
+se;border-spacing:0px;">=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"left" style=3D"padding:0;Margin:0;"><p s=
+tyle=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;ms=
+o-line-height-rule:exactly;font-size:12px;font-family:verdana, geneva, sans=
+-serif;line-height:18px;color:#333333;"><strong>Quantity</strong></p></td>=20
+                     </tr>=20
+                   </table></td>=20
+                 </tr>=20
+               </table>=20
+               <table cellpadding=3D"0" cellspacing=3D"0" class=3D"es-right=
+" align=3D"right" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border=
+-collapse:collapse;border-spacing:0px;float:right;">=20
+                 <tr style=3D"border-collapse:collapse;">=20
+                  <td width=3D"120" align=3D"center" style=3D"padding:0;Mar=
+gin:0;">=20
+                   <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collap=
+se;border-spacing:0px;">=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"left" style=3D"padding:0;Margin:0;"><p s=
+tyle=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;ms=
+o-line-height-rule:exactly;font-size:12px;font-family:verdana, geneva, sans=
+-serif;line-height:18px;color:#333333;"><strong>Price</strong></p></td>=20
+                     </tr>=20
+                   </table></td>=20
+                 </tr>=20
+               </table>=20
+               <!--[if mso]></td></tr></table><![endif]--></td>=20
+             </tr>=20
+             <tr style=3D"border-collapse:collapse;">=20
+              <td align=3D"left" style=3D"padding:0;Margin:0;padding-left:2=
+0px;padding-right:20px;">=20
+               <!--[if mso]><table width=3D"560" cellpadding=3D"0" cellspac=
+ing=3D"0"><tr><td width=3D"280" valign=3D"top"><![endif]-->=20
+               <table cellpadding=3D"0" cellspacing=3D"0" class=3D"es-left"=
+ align=3D"left" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-c=
+ollapse:collapse;border-spacing:0px;float:left;">=20
+                 <tr style=3D"border-collapse:collapse;">=20
+                  <td width=3D"240" class=3D"es-m-p20b" align=3D"center" st=
+yle=3D"padding:0;Margin:0;">=20
+                   <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collap=
+se;border-spacing:0px;">=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"left" class=3D"es-m-txt-c" style=3D"padd=
+ing:0;Margin:0;padding-bottom:15px;">
+                      <p style=3D"Margin:0;-webkit-text-size-adjust:none;-m=
+s-text-size-adjust:none;mso-line-height-rule:exactly;font-size:12px;font-fa=
+mily:verdana, geneva, sans-serif;line-height:18px;color:#333333;">
+                      Cream Donut  - Colombia
+                      <br/>
+                                    <strong>250g</strong>
+                                    <br/>
+                                    <strong>filter</strong>
+                                    <br/>
+                      </p>
+                      </td>=20
+                     </tr>=20
+                   </table></td>=20
+                  <td class=3D"es-hidden" width=3D"40" style=3D"padding:0;M=
+argin:0;"></td>=20
+                 </tr>=20
+               </table>=20
+               <!--[if mso]></td><td width=3D"120" valign=3D"top"><![endif]=
+-->=20
+               <table cellpadding=3D"0" cellspacing=3D"0" class=3D"es-left"=
+ align=3D"left" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-c=
+ollapse:collapse;border-spacing:0px;float:left;">=20
+                 <tr style=3D"border-collapse:collapse;">=20
+                  <td width=3D"120" class=3D"es-m-p20b" align=3D"center" st=
+yle=3D"padding:0;Margin:0;">=20
+                   <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collap=
+se;border-spacing:0px;">=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"left" class=3D"es-m-txt-c" style=3D"padd=
+ing:0;Margin:0;padding-bottom:15px;"><p style=3D"Margin:0;-webkit-text-size=
+-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-si=
+ze:12px;font-family:verdana, geneva, sans-serif;line-height:18px;color:#333=
+333;"><strong>1</strong></p></td>=20
+                     </tr>=20
+                   </table></td>=20
+                 </tr>=20
+               </table>=20
+               <!--[if mso]></td><td width=3D"40"></td><td width=3D"120" va=
+lign=3D"top"><![endif]-->=20
+               <table cellpadding=3D"0" cellspacing=3D"0" class=3D"es-right=
+" align=3D"right" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border=
+-collapse:collapse;border-spacing:0px;float:right;">=20
+                 <tr style=3D"border-collapse:collapse;">=20
+                  <td width=3D"120" align=3D"center" style=3D"padding:0;Mar=
+gin:0;">=20
+                   <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collap=
+se;border-spacing:0px;">=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"left" class=3D"es-m-txt-c" style=3D"padd=
+ing:0;Margin:0;padding-bottom:15px;"><p style=3D"Margin:0;-webkit-text-size=
+-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-si=
+ze:12px;font-family:verdana, geneva, sans-serif;line-height:18px;color:#333=
+333;">=E2=82=AC19.95</p></td>=20
+                     </tr>=20
+                   </table></td>=20
+                 </tr>=20
+               </table>=20
+               <!--[if mso]></td></tr></table><![endif]--></td>=20
+             </tr>=20
+             <tr style=3D"border-collapse:collapse;">=20
+              <td align=3D"left" style=3D"padding:0;Margin:0;padding-left:2=
+0px;padding-right:20px;">=20
+               <!--[if mso]><table width=3D"560" cellpadding=3D"0" cellspac=
+ing=3D"0"><tr><td width=3D"280" valign=3D"top"><![endif]-->=20
+               <table cellpadding=3D"0" cellspacing=3D"0" class=3D"es-left"=
+ align=3D"left" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-c=
+ollapse:collapse;border-spacing:0px;float:left;">=20
+                 <tr style=3D"border-collapse:collapse;">=20
+                  <td width=3D"240" class=3D"es-m-p20b" align=3D"center" st=
+yle=3D"padding:0;Margin:0;">=20
+                   <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collap=
+se;border-spacing:0px;">=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"left" class=3D"es-m-txt-c" style=3D"padd=
+ing:0;Margin:0;padding-bottom:15px;">
+                      <p style=3D"Margin:0;-webkit-text-size-adjust:none;-m=
+s-text-size-adjust:none;mso-line-height-rule:exactly;font-size:12px;font-fa=
+mily:verdana, geneva, sans-serif;line-height:18px;color:#333333;">
+                      Orange Flirt - Ethiopia
+                      <br/>
+                                    <strong>250g</strong>
+                                    <br/>
+                                    <strong>filter</strong>
+                                    <br/>
+                      </p>
+                      </td>=20
+                     </tr>=20
+                   </table></td>=20
+                  <td class=3D"es-hidden" width=3D"40" style=3D"padding:0;M=
+argin:0;"></td>=20
+                 </tr>=20
+               </table>=20
+               <!--[if mso]></td><td width=3D"120" valign=3D"top"><![endif]=
+-->=20
+               <table cellpadding=3D"0" cellspacing=3D"0" class=3D"es-left"=
+ align=3D"left" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-c=
+ollapse:collapse;border-spacing:0px;float:left;">=20
+                 <tr style=3D"border-collapse:collapse;">=20
+                  <td width=3D"120" class=3D"es-m-p20b" align=3D"center" st=
+yle=3D"padding:0;Margin:0;">=20
+                   <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collap=
+se;border-spacing:0px;">=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"left" class=3D"es-m-txt-c" style=3D"padd=
+ing:0;Margin:0;padding-bottom:15px;"><p style=3D"Margin:0;-webkit-text-size=
+-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-si=
+ze:12px;font-family:verdana, geneva, sans-serif;line-height:18px;color:#333=
+333;"><strong>1</strong></p></td>=20
+                     </tr>=20
+                   </table></td>=20
+                 </tr>=20
+               </table>=20
+               <!--[if mso]></td><td width=3D"40"></td><td width=3D"120" va=
+lign=3D"top"><![endif]-->=20
+               <table cellpadding=3D"0" cellspacing=3D"0" class=3D"es-right=
+" align=3D"right" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border=
+-collapse:collapse;border-spacing:0px;float:right;">=20
+                 <tr style=3D"border-collapse:collapse;">=20
+                  <td width=3D"120" align=3D"center" style=3D"padding:0;Mar=
+gin:0;">=20
+                   <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collap=
+se;border-spacing:0px;">=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"left" class=3D"es-m-txt-c" style=3D"padd=
+ing:0;Margin:0;padding-bottom:15px;"><p style=3D"Margin:0;-webkit-text-size=
+-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-si=
+ze:12px;font-family:verdana, geneva, sans-serif;line-height:18px;color:#333=
+333;">=E2=82=AC16.00</p></td>=20
+                     </tr>=20
+                   </table></td>=20
+                 </tr>=20
+               </table>=20
+               <!--[if mso]></td></tr></table><![endif]--></td>=20
+             </tr>=20
+             <tr style=3D"border-collapse:collapse;">=20
+              <td align=3D"left" style=3D"padding:0;Margin:0;padding-left:2=
+0px;padding-right:20px;">=20
+               <!--[if mso]><table width=3D"560" cellpadding=3D"0" cellspac=
+ing=3D"0"><tr><td width=3D"280" valign=3D"top"><![endif]-->=20
+               <table cellpadding=3D"0" cellspacing=3D"0" class=3D"es-left"=
+ align=3D"left" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-c=
+ollapse:collapse;border-spacing:0px;float:left;">=20
+                 <tr style=3D"border-collapse:collapse;">=20
+                  <td width=3D"240" class=3D"es-m-p20b" align=3D"center" st=
+yle=3D"padding:0;Margin:0;">=20
+                   <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collap=
+se;border-spacing:0px;">=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"left" class=3D"es-m-txt-c" style=3D"padd=
+ing:0;Margin:0;padding-bottom:15px;">
+                      <p style=3D"Margin:0;-webkit-text-size-adjust:none;-m=
+s-text-size-adjust:none;mso-line-height-rule:exactly;font-size:12px;font-fa=
+mily:verdana, geneva, sans-serif;line-height:18px;color:#333333;">
+                      Milky Cake - Colombia
+                      <br/>
+                                    <strong>250g</strong>
+                                    <br/>
+                                    <strong>filter</strong>
+                                    <br/>
+                      </p>
+                      </td>=20
+                     </tr>=20
+                   </table></td>=20
+                  <td class=3D"es-hidden" width=3D"40" style=3D"padding:0;M=
+argin:0;"></td>=20
+                 </tr>=20
+               </table>=20
+               <!--[if mso]></td><td width=3D"120" valign=3D"top"><![endif]=
+-->=20
+               <table cellpadding=3D"0" cellspacing=3D"0" class=3D"es-left"=
+ align=3D"left" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-c=
+ollapse:collapse;border-spacing:0px;float:left;">=20
+                 <tr style=3D"border-collapse:collapse;">=20
+                  <td width=3D"120" class=3D"es-m-p20b" align=3D"center" st=
+yle=3D"padding:0;Margin:0;">=20
+                   <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collap=
+se;border-spacing:0px;">=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"left" class=3D"es-m-txt-c" style=3D"padd=
+ing:0;Margin:0;padding-bottom:15px;"><p style=3D"Margin:0;-webkit-text-size=
+-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-si=
+ze:12px;font-family:verdana, geneva, sans-serif;line-height:18px;color:#333=
+333;"><strong>1</strong></p></td>=20
+                     </tr>=20
+                   </table></td>=20
+                 </tr>=20
+               </table>=20
+               <!--[if mso]></td><td width=3D"40"></td><td width=3D"120" va=
+lign=3D"top"><![endif]-->=20
+               <table cellpadding=3D"0" cellspacing=3D"0" class=3D"es-right=
+" align=3D"right" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border=
+-collapse:collapse;border-spacing:0px;float:right;">=20
+                 <tr style=3D"border-collapse:collapse;">=20
+                  <td width=3D"120" align=3D"center" style=3D"padding:0;Mar=
+gin:0;">=20
+                   <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collap=
+se;border-spacing:0px;">=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"left" class=3D"es-m-txt-c" style=3D"padd=
+ing:0;Margin:0;padding-bottom:15px;"><p style=3D"Margin:0;-webkit-text-size=
+-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-si=
+ze:12px;font-family:verdana, geneva, sans-serif;line-height:18px;color:#333=
+333;">=E2=82=AC19.95</p></td>=20
+                     </tr>=20
+                   </table></td>=20
+                 </tr>=20
+               </table>=20
+               <!--[if mso]></td></tr></table><![endif]--></td>=20
+             </tr>=20
+             <tr style=3D"border-collapse:collapse;">=20
+              <td align=3D"left" style=3D"padding:0;Margin:0;padding-left:2=
+0px;padding-right:20px;">=20
+               <!--[if mso]><table width=3D"560" cellpadding=3D"0" cellspac=
+ing=3D"0"><tr><td width=3D"280" valign=3D"top"><![endif]-->=20
+               <table cellpadding=3D"0" cellspacing=3D"0" class=3D"es-left"=
+ align=3D"left" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-c=
+ollapse:collapse;border-spacing:0px;float:left;">=20
+                 <tr style=3D"border-collapse:collapse;">=20
+                  <td width=3D"240" class=3D"es-m-p20b" align=3D"center" st=
+yle=3D"padding:0;Margin:0;">=20
+                   <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collap=
+se;border-spacing:0px;">=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"left" class=3D"es-m-txt-c" style=3D"padd=
+ing:0;Margin:0;padding-bottom:15px;">
+                      <p style=3D"Margin:0;-webkit-text-size-adjust:none;-m=
+s-text-size-adjust:none;mso-line-height-rule:exactly;font-size:12px;font-fa=
+mily:verdana, geneva, sans-serif;line-height:18px;color:#333333;">
+                      Berry Blues - Ethiopia
+                      <br/>
+                                    <strong>250g</strong>
+                                    <br/>
+                                    <strong>filter</strong>
+                                    <br/>
+                      </p>
+                      </td>=20
+                     </tr>=20
+                   </table></td>=20
+                  <td class=3D"es-hidden" width=3D"40" style=3D"padding:0;M=
+argin:0;"></td>=20
+                 </tr>=20
+               </table>=20
+               <!--[if mso]></td><td width=3D"120" valign=3D"top"><![endif]=
+-->=20
+               <table cellpadding=3D"0" cellspacing=3D"0" class=3D"es-left"=
+ align=3D"left" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-c=
+ollapse:collapse;border-spacing:0px;float:left;">=20
+                 <tr style=3D"border-collapse:collapse;">=20
+                  <td width=3D"120" class=3D"es-m-p20b" align=3D"center" st=
+yle=3D"padding:0;Margin:0;">=20
+                   <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collap=
+se;border-spacing:0px;">=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"left" class=3D"es-m-txt-c" style=3D"padd=
+ing:0;Margin:0;padding-bottom:15px;"><p style=3D"Margin:0;-webkit-text-size=
+-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-si=
+ze:12px;font-family:verdana, geneva, sans-serif;line-height:18px;color:#333=
+333;"><strong>1</strong></p></td>=20
+                     </tr>=20
+                   </table></td>=20
+                 </tr>=20
+               </table>=20
+               <!--[if mso]></td><td width=3D"40"></td><td width=3D"120" va=
+lign=3D"top"><![endif]-->=20
+               <table cellpadding=3D"0" cellspacing=3D"0" class=3D"es-right=
+" align=3D"right" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border=
+-collapse:collapse;border-spacing:0px;float:right;">=20
+                 <tr style=3D"border-collapse:collapse;">=20
+                  <td width=3D"120" align=3D"center" style=3D"padding:0;Mar=
+gin:0;">=20
+                   <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collap=
+se;border-spacing:0px;">=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"left" class=3D"es-m-txt-c" style=3D"padd=
+ing:0;Margin:0;padding-bottom:15px;"><p style=3D"Margin:0;-webkit-text-size=
+-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-si=
+ze:12px;font-family:verdana, geneva, sans-serif;line-height:18px;color:#333=
+333;">=E2=82=AC21.95</p></td>=20
+                     </tr>=20
+                   </table></td>=20
+                 </tr>=20
+               </table>=20
+               <!--[if mso]></td></tr></table><![endif]--></td>=20
+             </tr>=20
+             <tr class=3D"es-mobile-hidden" style=3D"border-collapse:collap=
+se;">=20
+              <td align=3D"left" style=3D"padding:0;Margin:0;padding-top:5p=
+x;padding-left:20px;padding-right:20px;">=20
+               <!--[if mso]><table width=3D"560" cellpadding=3D"0" cellspac=
+ing=3D"0"><tr><td width=3D"400" valign=3D"top"><![endif]-->=20
+               <table cellpadding=3D"0" cellspacing=3D"0" class=3D"es-left"=
+ align=3D"left" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-c=
+ollapse:collapse;border-spacing:0px;float:left;">=20
+                 <tr style=3D"border-collapse:collapse;">=20
+                  <td width=3D"400" class=3D"es-m-p20b" align=3D"center" st=
+yle=3D"padding:0;Margin:0;">=20
+                   <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collap=
+se;border-spacing:0px;">=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"left" class=3D"es-m-txt-c" style=3D"padd=
+ing:0;Margin:0;padding-bottom:15px;"><p style=3D"Margin:0;-webkit-text-size=
+-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-si=
+ze:12px;font-family:verdana, geneva, sans-serif;line-height:18px;color:#333=
+333;"><b>Subtotal</b></p></td>=20
+                     </tr>=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"left" class=3D"es-m-txt-c" style=3D"padd=
+ing:0;Margin:0;padding-bottom:15px;"><p style=3D"Margin:0;-webkit-text-size=
+-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-si=
+ze:12px;font-family:verdana, geneva, sans-serif;line-height:18px;color:#333=
+333;"><b>GLS</b></p></td>=20
+                     </tr>=20
+                   </table></td>=20
+                 </tr>=20
+               </table>=20
+               <!--[if mso]></td><td width=3D"40"></td><td width=3D"120" va=
+lign=3D"top"><![endif]-->=20
+               <table cellpadding=3D"0" cellspacing=3D"0" class=3D"es-right=
+" align=3D"right" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border=
+-collapse:collapse;border-spacing:0px;float:right;">=20
+                 <tr style=3D"border-collapse:collapse;">=20
+                  <td width=3D"120" align=3D"center" style=3D"padding:0;Mar=
+gin:0;">=20
+                   <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collap=
+se;border-spacing:0px;">=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"left" class=3D"es-m-txt-c" style=3D"padd=
+ing:0;Margin:0;padding-bottom:15px;"><p style=3D"Margin:0;-webkit-text-size=
+-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-si=
+ze:12px;font-family:verdana, geneva, sans-serif;line-height:18px;color:#333=
+333;"><b>=E2=82=AC77.85</b></p></td>=20
+                     </tr>=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"left" class=3D"es-m-txt-c" style=3D"padd=
+ing:0;Margin:0;padding-bottom:15px;"><p style=3D"Margin:0;-webkit-text-size=
+-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-si=
+ze:12px;font-family:verdana, geneva, sans-serif;line-height:18px;color:#333=
+333;"><b>=E2=82=AC0.00</b></p></td>=20
+                     </tr>=20
+                   </table></td>=20
+                 </tr>=20
+               </table>=20
+               <!--[if mso]></td></tr></table><![endif]--></td>=20
+             </tr>=20
+             <tr style=3D"border-collapse:collapse;">=20
+              <td align=3D"left" style=3D"padding:0;Margin:0;padding-top:10=
+px;padding-left:20px;padding-right:20px;">=20
+               <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" st=
+yle=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;b=
+order-spacing:0px;">=20
+                 <tr style=3D"border-collapse:collapse;">=20
+                  <td width=3D"560" align=3D"center" valign=3D"top" style=
+=3D"padding:0;Margin:0;">=20
+                   <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collap=
+se;border-spacing:0px;">=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"center" style=3D"padding:0;Margin:0;padd=
+ing-bottom:20px;">=20
+                       <table border=3D"0" width=3D"100%" height=3D"100%" c=
+ellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt;mso-table-=
+rspace:0pt;border-collapse:collapse;border-spacing:0px;">=20
+                         <tr style=3D"border-collapse:collapse;">=20
+                          <td style=3D"padding:0;Margin:0px 0px 0px 0px;bor=
+der-bottom:1px solid #CCCCCC;background:none;height:1px;width:100%;margin:0=
+px;"></td>=20
+                         </tr>=20
+                       </table></td>=20
+                     </tr>=20
+                   </table></td>=20
+                 </tr>=20
+               </table></td>=20
+             </tr>=20
+             <tr style=3D"border-collapse:collapse;">=20
+              <td align=3D"left" style=3D"padding:0;Margin:0;padding-top:5p=
+x;padding-left:20px;padding-right:20px;">=20
+               <!--[if mso]><table width=3D"560" cellpadding=3D"0" cellspac=
+ing=3D"0"><tr><td width=3D"400" valign=3D"top"><![endif]-->=20
+               <table cellpadding=3D"0" cellspacing=3D"0" class=3D"es-left"=
+ align=3D"left" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-c=
+ollapse:collapse;border-spacing:0px;float:left;">=20
+                 <tr style=3D"border-collapse:collapse;">=20
+                  <td width=3D"400" class=3D"es-m-p20b" align=3D"center" st=
+yle=3D"padding:0;Margin:0;">=20
+                   <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collap=
+se;border-spacing:0px;">=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"left" class=3D"es-m-txt-c" style=3D"padd=
+ing:0;Margin:0;padding-bottom:15px;"><p style=3D"Margin:0;-webkit-text-size=
+-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-si=
+ze:12px;font-family:verdana, geneva, sans-serif;line-height:18px;color:#333=
+333;">                         <strong>Total</strong>
+                     </p></td>=20
+                     </tr>=20
+                   </table></td>=20
+                 </tr>=20
+               </table>=20
+               <!--[if mso]></td><td width=3D"40"></td><td width=3D"120" va=
+lign=3D"top"><![endif]-->=20
+               <table cellpadding=3D"0" cellspacing=3D"0" class=3D"es-right=
+" align=3D"right" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border=
+-collapse:collapse;border-spacing:0px;float:right;">=20
+                 <tr style=3D"border-collapse:collapse;">=20
+                  <td width=3D"120" align=3D"center" style=3D"padding:0;Mar=
+gin:0;">=20
+                   <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collap=
+se;border-spacing:0px;">=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"left" class=3D"es-m-txt-c" style=3D"padd=
+ing:0;Margin:0;padding-bottom:15px;"><p style=3D"Margin:0;-webkit-text-size=
+-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-si=
+ze:12px;font-family:verdana, geneva, sans-serif;line-height:18px;color:#333=
+333;">                        <strong>
+                            =E2=82=AC77.85
+                        </strong>
+                        </p></td>=20
+                     </tr>=20
+                   </table></td>=20
+                 </tr>=20
+               </table>=20
+               <!--[if mso]></td></tr></table><![endif]--></td>=20
+             </tr>=20
+             <tr style=3D"border-collapse:collapse;">=20
+              <td align=3D"left" style=3D"padding:0;Margin:0;padding-top:10=
+px;padding-left:20px;padding-right:20px;">=20
+               <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" st=
+yle=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;b=
+order-spacing:0px;">=20
+                 <tr style=3D"border-collapse:collapse;">=20
+                  <td width=3D"560" align=3D"center" valign=3D"top" style=
+=3D"padding:0;Margin:0;">=20
+                   <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collap=
+se;border-spacing:0px;">=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"center" style=3D"padding:0;Margin:0;padd=
+ing-bottom:20px;">=20
+                       <table border=3D"0" width=3D"100%" height=3D"100%" c=
+ellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt;mso-table-=
+rspace:0pt;border-collapse:collapse;border-spacing:0px;">=20
+                         <tr style=3D"border-collapse:collapse;">=20
+                          <td style=3D"padding:0;Margin:0px;border-bottom:1=
+px solid #343434;background:none;height:1px;width:100%;margin:0px;"></td>=20
+                         </tr>=20
+                       </table></td>=20
+                     </tr>=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"center" style=3D"padding:0;Margin:0;padd=
+ing-bottom:15px;"><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-te=
+xt-size-adjust:none;mso-line-height-rule:exactly;font-size:12px;font-family=
+:verdana, geneva, sans-serif;line-height:18px;color:#333333;">Y O U R&nbsp;=
+ &nbsp;A D D R E S S</p></td>=20
+                     </tr>=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"center" style=3D"padding:0;Margin:0;padd=
+ing-bottom:25px;"><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-te=
+xt-size-adjust:none;mso-line-height-rule:exactly;font-size:12px;font-family=
+:verdana, geneva, sans-serif;line-height:18px;color:#333333;">Thomas Smith<=
+/p><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:=
+none;mso-line-height-rule:exactly;font-size:12px;font-family:verdana, genev=
+a, sans-serif;line-height:18px;color:#333333;">Akulaan 20</p><p style=3D"Ma=
+rgin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-hei=
+ght-rule:exactly;font-size:12px;font-family:verdana, geneva, sans-serif;lin=
+e-height:18px;color:#333333;">Ede, Gelderland, 6717XN, NL</p></td>=20
+                     </tr>=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"center" bgcolor=3D"#f8f8f9" style=3D"pad=
+ding:0;Margin:0;padding-bottom:15px;padding-top:20px;"><p style=3D"Margin:0=
+;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-ru=
+le:exactly;font-size:12px;font-family:verdana, geneva, sans-serif;line-heig=
+ht:18px;color:#333333;">Y O U R &nbsp; A C C O U N T</p></td>=20
+                     </tr>=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"center" bgcolor=3D"#f8f8f9" style=3D"pad=
+ding:0;Margin:0;"><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-te=
+xt-size-adjust:none;mso-line-height-rule:exactly;font-size:12px;font-family=
+:verdana, geneva, sans-serif;line-height:18px;color:#333333;">thomas.smith@=
+hey.com</p><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size=
+-adjust:none;mso-line-height-rule:exactly;font-size:12px;font-family:verdan=
+a, geneva, sans-serif;line-height:18px;color:#333333;"><br></p></td>=20
+                     </tr>=20
+                   </table></td>=20
+                 </tr>=20
+               </table></td>=20
+             </tr>=20
+             <tr style=3D"border-collapse:collapse;">=20
+              <td align=3D"left" style=3D"padding:0;Margin:0;padding-top:20=
+px;padding-left:20px;padding-right:20px;">=20
+               <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" st=
+yle=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;b=
+order-spacing:0px;">=20
+                 <tr style=3D"border-collapse:collapse;">=20
+                  <td width=3D"560" align=3D"center" valign=3D"top" style=
+=3D"padding:0;Margin:0;">=20
+                   <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collap=
+se;border-spacing:0px;">=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"center" style=3D"padding:0;Margin:0;padd=
+ing-bottom:20px;">=20
+                       <table border=3D"0" width=3D"100%" height=3D"100%" c=
+ellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt;mso-table-=
+rspace:0pt;border-collapse:collapse;border-spacing:0px;">=20
+                         <tr style=3D"border-collapse:collapse;">=20
+                          <td style=3D"padding:0;Margin:0px;border-bottom:1=
+px solid #343434;background:none;height:1px;width:100%;margin:0px;"></td>=20
+                         </tr>=20
+                       </table></td>=20
+                     </tr>=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"center" style=3D"padding:0;Margin:0;"><p=
+ style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;=
+mso-line-height-rule:exactly;font-size:12px;font-family:verdana, geneva, sa=
+ns-serif;line-height:18px;color:#333333;">If you have any questions about y=
+our order, don't hesitate to get in touch.</p></td>=20
+                     </tr>=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"center" style=3D"padding:0;Margin:0;padd=
+ing-top:25px;padding-bottom:25px;"><span class=3D"es-button-border" style=
+=3D"border-style:solid;border-color:#2CB543;background:#343434;border-width=
+:0px;display:inline-block;border-radius:0px;width:auto;"><a href=3D"mailto:=
+info@dakcoffeeroasters.com" class=3D"es-button" target=3D"_blank" style=3D"=
+mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-ad=
+just:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-famil=
+y:verdana, geneva, sans-serif;font-size:14px;color:#FFFFFF;border-style:sol=
+id;border-color:#343434;border-width:10px 40px;display:inline-block;backgro=
+und:#343434;border-radius:0px;font-weight:normal;font-style:normal;line-hei=
+ght:17px;width:auto;text-align:center;">CONTACT US</a></span></td>=20
+                     </tr>=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"center" style=3D"padding:0;Margin:0;padd=
+ing-bottom:20px;">=20
+                       <table border=3D"0" width=3D"100%" height=3D"100%" c=
+ellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt;mso-table-=
+rspace:0pt;border-collapse:collapse;border-spacing:0px;">=20
+                         <tr style=3D"border-collapse:collapse;">=20
+                          <td style=3D"padding:0;Margin:0px;border-bottom:1=
+px solid #343434;background:none;height:1px;width:100%;margin:0px;"></td>=20
+                         </tr>=20
+                       </table></td>=20
+                     </tr>=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"center" class=3D"es-m-txt-c" style=3D"pa=
+dding:0;Margin:0;"><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-t=
+ext-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-famil=
+y:'times new roman', times, baskerville, georgia, serif;line-height:21px;co=
+lor:#333333;"><em>"We are committed to offering you the best quality coffee=
+ possible, while reducing our footprint. After all, we only have one planet=
+."</em></p></td>=20
+                     </tr>=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"center" style=3D"padding:0;Margin:0;padd=
+ing-top:20px;padding-bottom:20px;">=20
+                       <table border=3D"0" width=3D"100%" height=3D"100%" c=
+ellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt;mso-table-=
+rspace:0pt;border-collapse:collapse;border-spacing:0px;">=20
+                         <tr style=3D"border-collapse:collapse;">=20
+                          <td style=3D"padding:0;Margin:0px;border-bottom:1=
+px solid #343434;background:none;height:1px;width:100%;margin:0px;"></td>=20
+                         </tr>=20
+                       </table></td>=20
+                     </tr>=20
+                   </table></td>=20
+                 </tr>=20
+               </table></td>=20
+             </tr>=20
+           </table></td>=20
+         </tr>=20
+       </table>=20
+       <table cellpadding=3D"0" cellspacing=3D"0" class=3D"es-content" alig=
+n=3D"center" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-coll=
+apse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%;"=
+>=20
+         <tr style=3D"border-collapse:collapse;">=20
+          <td align=3D"center" bgcolor=3D"#dddede" style=3D"padding:0;Margi=
+n:0;background-color:#DDDEDE;">=20
+           <table class=3D"es-footer-body" style=3D"mso-table-lspace:0pt;ms=
+o-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-c=
+olor:#F8F8F9;" width=3D"600" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D=
+"#f8f8f9" align=3D"center">=20
+             <tr style=3D"border-collapse:collapse;">=20
+              <td align=3D"left" bgcolor=3D"#dddede" style=3D"padding:0;Mar=
+gin:0;padding-bottom:15px;padding-left:15px;padding-right:15px;background-c=
+olor:#DDDEDE;">=20
+               <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" st=
+yle=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;b=
+order-spacing:0px;">=20
+                 <tr style=3D"border-collapse:collapse;">=20
+                  <td width=3D"570" valign=3D"top" align=3D"center" style=
+=3D"padding:0;Margin:0;">=20
+                   <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0=
+" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collap=
+se;border-spacing:0px;">=20
+                     <tr style=3D"border-collapse:collapse;">=20
+                      <td align=3D"left" class=3D"es-m-txt-c" style=3D"padd=
+ing:0;Margin:0;padding-left:20px;padding-right:20px;"><p style=3D"Margin:0;=
+-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rul=
+e:exactly;font-size:12px;font-family:verdana, geneva, sans-serif;line-heigh=
+t:18px;color:#333333;"><a target=3D"_blank" style=3D"-webkit-text-size-adju=
+st:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:=
+verdana, geneva, sans-serif;font-size:12px;text-decoration:none;color:#3434=
+34;" href=3D"https://www.instagram.com/dakcoffeeroasters">Instagram</a>&nbs=
+p; |&nbsp; <a target=3D"_blank" style=3D"-webkit-text-size-adjust:none;-ms-=
+text-size-adjust:none;mso-line-height-rule:exactly;font-family:verdana, gen=
+eva, sans-serif;font-size:12px;text-decoration:none;color:#343434;" href=3D=
+"https://dakcoffeeroasters.com">Website</a> &nbsp;|&nbsp; &nbsp;Privacy Pol=
+icy</p></td>=20
+                     </tr>=20
+                   </table></td>=20
+                 </tr>=20
+               </table></td>=20
+             </tr>=20
+           </table></td>=20
+         </tr>=20
+       </table></td>=20
+     </tr>=20
+   </table>=20
+  </div> =20
+ <img src=3D"https://em3.snipcart.com/wf/open?upn=3Du001.BHQNCGnyUQdSqOoKIN=
+OInyO-2Fhdy-2B1kXjdp-2BH3ysHiGMUwKPoOfx3vJiTs6pxvk97Vwkp7SVlWVwW3lhgjKgILAQ=
+RMreu9xJu8tIe-2FnWDy9WNwuSSv3lMp47i98z-2B1JlTJYnYgHag6u1I9hFFd0iT77qdUisfuq=
+k-2FHAJCDy6BLzxGyKW8ZdhqsvcMbdaH78nRrwnuUcixgoGcbOa8eh2Ry9atVYkct-2BZCHJNdQ=
+MnjejddFjhmY2xnXIOtUbcqThsMSANCKsCREbaT53qDxGkDPbPq3S5NYChQrR4t7tAFZZCFt2wn=
+AdBnmZWoXLKKAfnphN35Ht8ULJzm1x21-2Fb2JohCUvLTJd8vjE61OwEfKVGS3f7VaAKawyb-2B=
+lSbC2oHT3" alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"height:1=
+px !important;width:1px !important;border-width:0 !important;margin-top:0 !=
+important;margin-bottom:0 !important;margin-right:0 !important;margin-left:=
+0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-r=
+ight:0 !important;padding-left:0 !important;"/></body>
+</html>
